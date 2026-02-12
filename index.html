@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">Submit</button>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
     <title>Personal Online CV</title>
 </head>
 
@@ -10,10 +11,11 @@
     <header>
         <section>
             <h1>Eric John Elcamel</h1>
-            <p> IT Student | Web Systems and Technologies </p>
+            <p style="text-align:center;" >IT Student | Web Systems and Technologies </p>
     </header>
+    <div class="container">
     <main>
-        <section>
+        <section class="card">
             <h2>About Me</h2>
             <img src="images/profile.jpg" alt="Profile photo" width="200" height="165">
             <p> I am a student in USTP (University of Science and Technology of Southern Philippines)</p>
@@ -23,7 +25,7 @@
                 <a href="https://github.com" target="_blank">github.com</a>
             </p>
         </section>
-        <section>
+        <section class="card">
             <h2>Skills</h2>
             <ul>
                 <li>HTML</li>
@@ -42,37 +44,37 @@
                             <li>Backend</li>
                         </ul>
         </section>
-        <section>
+        <section class="card">
             <h2>Education</h2>
-            <table border="1" cellpadding="10" cellspacing="0">
+            <table>
                 <tr>
                     <th>Program</th>
                     <th>Institution</th>
                     <th>Year Graduated</th>
                 </tr>
                 <tr>
-                    <th>Kinder</th>
-                    <th>Taguanao</th>
-                    <th>2010</th>
+                    <td>Kinder</td>
+                    <td>Taguanao</td>
+                    <td>2010</td>
                 </tr>
                 <tr>
-                    <th>Elementary</th>
-                    <th>Taguanao</th>
-                    <th>2017</th>
+                    <td>Elementary</td>
+                    <td>Taguanao</td>
+                    <td>2017</td>
                 </tr>
                 <tr>
-                    <th>High School</th>
-                    <th>CDO-JHS</th>
-                    <th>2022</th>
+                    <td>High School</td>
+                    <td>CDO-JHS</td>
+                    <td>2022</td>
                 </tr>
                 <tr>
-                    <th>College</th>
-                    <th>USTP - CDO Campus</th>
-                    <th>2028</th>
+                    <td>College</td>
+                    <td>USTP - CDO Campus</td>
+                    <td>2028</td>
                 </tr>
-            </table>
+            </table>             
         </section>
-        <section>
+        <section class="card">
             <h2>Contact Me</h2>
             <form>
                 <input type="text" placeholder="Name"><br><br>
@@ -82,6 +84,7 @@
             </form>
         </section>
     </main>
+    </div>
     <footer>
         <p>&copy; 2026 Eric John Elcamel. All rights reserved. </p>
     </footer>
