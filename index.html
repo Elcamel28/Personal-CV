@@ -9,85 +9,95 @@
 
 <body>
     <header>
+        <button id="themeToggle">Toggle Dark Mode</button>
         <section>
             <h1>Eric John Elcamel</h1>
-            <p style="text-align:center;" >IT Student | Web Systems and Technologies </p>
+            <p style="text-align:center;">IT Student | Web Systems and Technologies</p>
+        </section>
     </header>
     <div class="container">
-    <main>
-        <section class="card">
-            <h2>About Me</h2>
-            <img src="images/profile.jpg" alt="Profile photo" width="200" height="165">
-            <p> I am a student in USTP (University of Science and Technology of Southern Philippines)</p>
-            <p>Email:
-                <a href="mailto:elcamel.ericjohn20@gmail.com">elcamel.ericjohn20@gmail.com</a><br>
-                GitHub:
-                <a href="https://github.com" target="_blank">github.com</a>
-            </p>
-        </section>
-        <section class="card">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
-            <ul>
-                <li>Web Development</li>
+        <main>
+            <section class="card">
+                <h2>About Me</h2>
+                <img src="images/profile.jpg" alt="Profile photo" width="200" height="165">
+                <p> I am a student in USTP (University of Science and Technology of Southern Philippines)</p>
+                <p>Email:
+                    <a href="mailto:elcamel.ericjohn20@gmail.com">elcamel.ericjohn20@gmail.com</a><br>
+                    GitHub:
+                    <a href="https://github.com" target="_blank">github.com</a>
+                </p>
+
+            </section>
+            <button id="toggleSkills">Show/Hide Skills</button>
+            <section class="card" id="skillsSection">
+                <h2>Skills</h2>
                 <ul>
-                    <li>Frontend</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+                <ul>
+                    <li>Web Development</li>
                     <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
+                        <li>Frontend</li>
                         <ul>
-                            <li>Backend</li>
-                        </ul>
-        </section>
-        <section class="card">
-            <h2>Education</h2>
-            <table>
-                <tr>
-                    <th>Program</th>
-                    <th>Institution</th>
-                    <th>Year Graduated</th>
-                </tr>
-                <tr>
-                    <td>Kinder</td>
-                    <td>Taguanao</td>
-                    <td>2010</td>
-                </tr>
-                <tr>
-                    <td>Elementary</td>
-                    <td>Taguanao</td>
-                    <td>2017</td>
-                </tr>
-                <tr>
-                    <td>High School</td>
-                    <td>CDO-JHS</td>
-                    <td>2022</td>
-                </tr>
-                <tr>
-                    <td>College</td>
-                    <td>USTP - CDO Campus</td>
-                    <td>2028</td>
-                </tr>
-            </table>             
-        </section>
-        <section class="card">
-            <h2>Contact Me</h2>
-            <form>
-                <input type="text" placeholder="Name"><br><br>
-                <input type="email" placeholder="Email"><br><br>
-                <textarea placeholder="Message"></textarea><br><br>
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <ul>
+                                <li>Backend</li>
+                            </ul>
+            </section>
+
+            <section class="card">
+                <h2>Education</h2>
+                <table>
+                    <tr>
+                        <th>Program</th>
+                        <th>Institution</th>
+                        <th>Year Graduated</th>
+                    </tr>
+                    <tr>
+                        <td>Kinder</td>
+                        <td>Taguanao</td>
+                        <td>2010</td>
+                    </tr>
+                    <tr>
+                        <td>Elementary</td>
+                        <td>Taguanao</td>
+                        <td>2017</td>
+                    </tr>
+                    <tr>
+                        <td>High School</td>
+                        <td>CDO-JHS</td>
+                        <td>2022</td>
+                    </tr>
+                    <tr>
+                        <td>College</td>
+                        <td>USTP - CDO Campus</td>
+                        <td>2028</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="card">
+                <h2>Contact Me</h2>
+                <form>
+                    <input type="text" id="name" placeholder="Name">
+                    <input type="email" id="email" placeholder="Email">
+                    <textarea placeholder="Message"></textarea><br>
+                    <button type="submit" id="submitBtn">Send</button>
+                </form>
+            </section>
+
+            <footer>
+                <p>&copy; 2026 Eric John Elcamel. All rights reserved.</p>
+            </footer>
+            
+        </main>
     </div>
-    <footer>
-        <p>&copy; 2026 Eric John Elcamel. All rights reserved. </p>
-    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>

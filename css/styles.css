@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     padding: 20px;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .container {
@@ -22,9 +23,11 @@ body {
     background: #ffffff;
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 8px;
+    border-radius: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
+
 
 /* || Typography */
 h1 {
@@ -55,11 +58,16 @@ a:hover {
     color: #D896FF;
 }
 
+
 table {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
+    overflow: hidden;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+
 
 th,
 td {
@@ -97,7 +105,20 @@ button:hover {
     background-color: #D896FF;
 }
 
-tr:nth-child(odd) {
-    background-color: #E6E6FA;
+
+.dark-mode .card {
+    background-color: #1e1e1e;
+    color: white;
 }
 
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+}
+
+#toggleSkills {
+    border-radius: 10px;   /* Smooth corners */
+}
