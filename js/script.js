@@ -9,8 +9,8 @@ const name = document.getElementById("name").value;
     alert("Please fill in all required fields.");
     } else{
     alert("Form submitted successfully!");
+    alert("Thank you! Your message has been received.");
     }
-alert("Thank you! Your message has been received.");
 });
 
 const themeToggle = document.getElementById("themeToggle");
