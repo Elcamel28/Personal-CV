@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: personal-cv-react   # 👈 change if folder name is different
+        working-directory: personal-cv-react
 
     steps:
       - uses: actions/checkout@v4
@@ -35,4 +35,10 @@ jobs:
         with:
           path: personal-cv-react/dist
 
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages   # ✅ REQUIRED
+    steps:
       - uses: actions/deploy-pages@v4
