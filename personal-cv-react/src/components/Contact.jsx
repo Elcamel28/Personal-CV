@@ -18,7 +18,7 @@ function Contact() {
 
   return (
     <section className="card">
-      <h2>Contact Me</h2>
+      <h2>Contact Me Here</h2>
 
       <form onSubmit={handleSubmit}>
         <input type="text" name="name" placeholder="Name" />
