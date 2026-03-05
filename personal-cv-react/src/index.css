@@ -103,6 +103,7 @@ button {
 
 button:hover {
     background-color: #D896FF;
+    
 }
 
 .dark-mode button {
@@ -121,10 +122,12 @@ button:hover {
 .dark-mode {
     background-color: #121212;
     color: white;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .hidden {
     display: none;
+    
 }
 
 footer {
@@ -132,5 +135,125 @@ footer {
 }
 
 #toggleSkills {
-    border-radius: 10px;   /* Smooth corners */
+    border-radius: 10px;  
+    
+
 }
+
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 30px;
+  }
+  
+  .toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .toggle label {
+    display: block;
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background: #ccc; /* Light mode background */
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  /* Dark mode background */
+  .toggle.dark label {
+    background: #444; /* Dark color when toggled */
+  }
+  
+  .toggle .button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background: #fff; /* Button color */
+    border-radius: 50%;
+    transition: transform 0.3s, background 0.3s;
+  }
+  
+  /* Button moves when checked */
+  .toggle input:checked + label .button {
+    transform: translateX(30px);
+  }
+  
+  /* Optional: change button color in dark mode */
+  .toggle.dark input:checked + label .button {
+    background: #222;
+  }
+  
+  .toggle .label {
+    position: absolute;
+    top: 0;
+    right: -25px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000;
+    transition: color 0.3s;
+  }
+  
+  /* Label color in dark mode */
+  .toggle.dark .label {
+    color: #fff;
+  }
+
+  .skills-list {
+    max-height: 500px; /* enough for all items */
+    overflow: hidden;
+    opacity: 1;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    transform: translateY(0);
+  transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .skills-list.hide {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-20px)
+  }
+
+  /* Scoped to Skills button only */
+.uiverse-button {
+    padding: 10px 10px;   
+    border: none;
+    border-radius: 10px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 800;        
+    font-size: 14px;       
+    box-shadow: 4px 6px 15px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+  }
+  
+  .uiverse-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 12px;
+    background-color: #212121;
+    z-index: -1;
+    box-shadow: 4px 6px 15px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+  }
+  
+  .uiverse-button:hover {
+    color: #e8e8e8;
+  }
+  
+  .uiverse-button:hover::before {
+    width: 100%;
+  }

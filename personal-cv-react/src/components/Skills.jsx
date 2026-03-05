@@ -1,21 +1,23 @@
 import { useState } from "react";
 
-function Skills() {
+function Skills({ skills }) {
   const [visible, setVisible] = useState(true);
 
   return (
     <section className="card" id="skillsSection">
       <h2>Skills</h2>
-      <button onClick={() => setVisible(!visible)}>
-        Show/Hide Skills
-      </button>
-      {visible && (
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-        </ul>
-      )}
+      <button
+  className="uiverse-button"
+  onClick={() => setVisible(!visible)}
+>
+  {visible ? "Hide Skills" : "Show Skills"}
+</button>
+
+      <ul className={`skills-list ${visible ? "show" : "hide"}`}>
+        {skills.map((skill, index) => (
+          <li key={index}>{skill}</li>
+        ))}
+      </ul>
     </section>
   );
 }

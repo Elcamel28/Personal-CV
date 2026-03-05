@@ -1,11 +1,9 @@
-import profileImg from "../assets/profile.jpg"; // make sure this path is correct
+import profileImg from "../assets/profile.jpg"; 
+import Card from "./Card";
 
 function About() {
   return (
-    <section className="card">
-      <h2>About Me</h2>
-
-      {}
+    <Card title="About Me">
       <img
         src={profileImg}
         alt="Profile photo"
@@ -17,6 +15,7 @@ function About() {
         I am a student in USTP (University of Science and Technology of Southern
         Philippines)
       </p>
+
       <p>
         Email:{" "}
         <a href="mailto:elcamel.ericjohn20@gmail.com">
@@ -28,7 +27,7 @@ function About() {
           github.com
         </a>
       </p>
-    </section>
+    </Card>
   );
 }
 
