@@ -8,11 +8,36 @@ function Contact() {
   function handleSubmit(e) {
     e.preventDefault();
 
+    // ✅ Validation
     if (!name || !email || !message) {
       alert("Please fill in all required fields.");
-    } else {
-      alert(`Thank you ${name}! Your message has been received.`);
+      return;
     }
+
+    // ✅ Send data to backend with proper error handling
+    fetch("http://localhost/cv-api/process.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, message })
+    })
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! Status: ${res.status}`);
+        }
+        return res.json(); // ✅ Parse JSON first
+      })
+      .then(data => {
+        if (data.message) {
+          alert(`Success: ${data.message}`); // ✅ Show server message
+        } else {
+          alert("Unexpected error occurred.");
+          console.warn("Unexpected error occurred:", data);
+        }
+      })
+      .catch(error => {
+        alert("Failed to send message. Please try again later."); // ✅ Handle network errors
+        console.error("Error submitting form:", error);
+      });
   }
 
   return (
@@ -42,9 +67,7 @@ function Contact() {
 
         <br />
 
-        <button type="submit">
-          Send
-        </button>
+        <button type="submit">Send</button>
       </form>
     </section>
   );
