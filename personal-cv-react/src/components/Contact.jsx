@@ -14,7 +14,9 @@ function Contact() {
       return;
     }
 
-    // ✅ Send data to backend with proper error handling
+
+
+   
     fetch("http://localhost/cv-api/process.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
