@@ -15,30 +15,24 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: personal-cv-react
+        working-directory: personal-cv-react   #  change if folder name is different
 
     steps:
-      # Checkout the repo
       - uses: actions/checkout@v4
 
-      # Setup Node
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
           cache-dependency-path: personal-cv-react/package-lock.json
 
-      # Install dependencies and build
       - run: npm install
       - run: npm run build
 
-      # Configure GitHub Pages
       - uses: actions/configure-pages@v4
 
-      # Upload the build folder (Vite outputs to 'dist')
       - uses: actions/upload-pages-artifact@v3
         with:
           path: personal-cv-react/dist
 
-      # Deploy to GitHub Pages
       - uses: actions/deploy-pages@v4
